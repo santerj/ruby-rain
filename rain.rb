@@ -31,6 +31,9 @@ def animation()
 				end
 			end
 
+			# reset cursor
+			print "\e[H"
+
 			# make the rain fall
 
 			for y in (0..$db[0].size-1)
