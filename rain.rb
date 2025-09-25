@@ -13,34 +13,39 @@ def animation()
 		$db.push(Array.new($HEIGHT, " "))
 	end
 
-	while true
-		
-		# pop the last (bottom) symbol from array,
-		# insert random symbol at 0
+	begin
+		while true
+			
+			# pop the last (bottom) symbol from array,
+			# insert random symbol at 0
 
-		for x in (0..$WIDTH)
-			$db[x].pop
-			case rand(100)
-			when 0
-				$db[x].unshift("|")
-			when 1
-				$db[x].unshift(":")
-			else
-				$db[x].unshift(" ")
+			for x in (0..$WIDTH)
+				$db[x].pop
+				case rand(100)
+				when 0
+					$db[x].unshift("|")
+				when 1
+					$db[x].unshift(":")
+				else
+					$db[x].unshift(" ")
+				end
 			end
+
+			# make the rain fall
+
+			for y in (0..$db[0].size-1)
+				for x in (0..$db.size-1)
+					print $db[x][y]
+				end
+				puts ""
+			end
+
+		sleep(0.02)
+
 		end
 
-		# make the rain fall
-
-		for y in (0..$db[0].size-1)
-			for x in (0..$db.size-1)
-				print $db[x][y]
-			end
-			puts ""
-		end
-
-	sleep(0.02)
-
+	rescue Interrupt
+		nil
 	end
 
 end
