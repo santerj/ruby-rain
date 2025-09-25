@@ -40,7 +40,7 @@ def animation()
 				for x in (0..$db.size-1)
 					print $db[x][y]
 				end
-				puts ""
+				print "\n"
 			end
 
 		sleep(0.015)
