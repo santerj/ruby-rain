@@ -43,7 +43,7 @@ def animation()
 				puts ""
 			end
 
-		sleep(0.02)
+		sleep(0.015)
 
 		end
 
