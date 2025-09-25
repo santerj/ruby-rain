@@ -1,2 +1,1 @@
-# it works on my machine
-lol
+    $ ruby rain.rb
