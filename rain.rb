@@ -21,7 +21,7 @@ def animation()
 
 			for x in (0..$WIDTH)
 				$db[x].pop
-				case rand(100)
+				case rand(150)
 				when 0
 					$db[x].unshift("|")
 				when 1
